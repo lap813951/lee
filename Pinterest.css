@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-container {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+}
+
+ .div-container {
+    position: sticky;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.div-container .logo a {
+    color: white;
+    margin-left: 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    margin-right: 25px;
+    transition: 0.5s ease;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle:hover {
+     background-color: rgba(255, 255, 255, 0.399);
+    }
+
+.div-container ul {
+    list-style: none;
+    display: flex;
+}
+
+.div-container li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 25px;
+    border-radius: 20px;
+    margin: 27px;
+    transition: 0.5s ease;
+}
+
+.div-container li a:hover {
+    background-color: fuchsia;
+    border: 1px solid red;
+}
+
+@media (max-width: 580px) {
+    .div-container ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        transition: 0.3s;
+        text-align: center;
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        background-color: gray;
+        gap: 3rem;
+        padding-top: 30px;
+    }
+
+    .div-container ul.active {
+        right: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Photo gird layout */
+
+.photo-container {
+    display: grid;
+    padding: 100px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+@media (max-width: 500px) {
+    .photo-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    p {
+        padding: 10px;
+        font-weight: 300;
+    }
+}
+
+@media (min-width: 500px) {
+    .photo-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 800px) {
+    .photo-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.first-con {
+    box-shadow: 0px 0px 5px;
+    border-radius: 10px;
+}
+
+.first-con img {
+    border-radius:10px 10px 0px 0px;
+}
+
+p {
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+    font-weight: 700;
+}
